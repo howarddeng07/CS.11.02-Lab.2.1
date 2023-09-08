@@ -1,23 +1,73 @@
+
 public class Main {
 
     public static void main(String[] args) {
+        int sum = add(3, 8);
+        System.out.println("Sum: " + sum);
+
+        int sumFour = add(3, 8, 4, 9);
+        System.out.println("Sum of Four Numbers: " + sumFour);
+
+        String morningMsg = morningGreeting("Toby Fox");
+        System.out.println(morningMsg);
+
+        String afternoonMsg = afternoonGreeting("Mac Miller");
+        System.out.println(afternoonMsg);
+
+        String tripleStr = triple("oohbaby");
+        System.out.println(tripleStr);
+
+        double halfValue = half(8);
+        System.out.println("Half Value: " + halfValue);
+
+        double halfValue2 = half(17);
+        System.out.println("Half Value: " + halfValue2);
+
+
+        int roundPosValue = roundPositiveValueToNearestInteger(8.5);
+        System.out.println("Rounded Positive Value: " + roundPosValue);
+
+        int roundPosValue2 = roundPositiveValueToNearestInteger(8.49);
+        System.out.println("Rounded Positive Value: " + roundPosValue2);
+
+        int roundNegValue = roundNegativeValueToNearestInteger(-8.5);
+        System.out.println("Rounded Negative Value: " + roundNegValue);
+
+        int roundNegValue2 = roundNegativeValueToNearestInteger(-8.49);
+        System.out.println("Rounded Negative Value: " + roundNegValue2);
 
     }
 
-    // 1. add
-    
-    // 2. add
+    public static int add(int a, int b) {
+       return a+b;
+    }
 
-    // 3. morningGreeting
+    public static int add(int a, int b, int c, int d){
+        return a+b+c+d;
+    }
 
-    // 4. afternoonGreeting
+    public static String morningGreeting(String name){
+        return "早上好, "+ name +"!";
+    }
 
-    // 5. triple
+    public static String afternoonGreeting(String name){
+        return "下午好, "+ name +"!";
+    }
 
-    // 6. half
+    public static String triple(String a){
+        return a.repeat(3);
+    }
 
-    // 7. roundPositiveValueToNearestInteger
+    public static double half(int a){
+        return (a/2.0);
+    }
 
-    // 8. roundNegativeValueToNearestInteger
+    public static int roundPositiveValueToNearestInteger(double a){
+        return (int) Math.round(a);
+    }
+
+    public static int roundNegativeValueToNearestInteger(double a){
+        return (int) Math.round(Math.abs(a)) * -1;
+    }
 
 }
